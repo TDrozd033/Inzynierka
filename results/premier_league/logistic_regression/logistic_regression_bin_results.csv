@@ -1,0 +1,2 @@
+Model,Accuracy,Macro-F1,League,SplitDate,N_train,N_test
+Logistic Regression (Binary HomeWin),0.6815789473684211,0.6684931506849315,premier_league,2022-07-01,2660,760

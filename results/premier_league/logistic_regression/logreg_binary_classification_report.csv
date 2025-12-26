@@ -1,0 +1,6 @@
+,precision,recall,f1-score,support,Model,League
+NoHomeWin (A/D),0.7043701799485861,0.683291770573566,0.6936708860759494,401.0,Logistic Regression (Binary),premier_league
+HomeWin (H),0.6576819407008087,0.6796657381615598,0.6684931506849315,359.0,Logistic Regression (Binary),premier_league
+accuracy,0.6815789473684211,0.6815789473684211,0.6815789473684211,0.6815789473684211,Logistic Regression (Binary),premier_league
+macro avg,0.6810260603246974,0.6814787543675629,0.6810820183804405,760.0,Logistic Regression (Binary),premier_league
+weighted avg,0.6823161300933859,0.6815789473684211,0.6817777189636134,760.0,Logistic Regression (Binary),premier_league

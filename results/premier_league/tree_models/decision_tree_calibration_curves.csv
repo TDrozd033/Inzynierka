@@ -1,0 +1,21 @@
+Class,MeanPredictedProb,FractionPositive,Model,League
+A,0.08223002630784809,0.023255813953488372,Decision Tree,premier_league
+A,0.12174544692628682,0.1,Decision Tree,premier_league
+A,0.238522367424532,0.24651162790697675,Decision Tree,premier_league
+A,0.34742118819735374,0.2619047619047619,Decision Tree,premier_league
+A,0.4427879194967849,0.4552238805970149,Decision Tree,premier_league
+A,0.5169274538592586,0.52,Decision Tree,premier_league
+A,0.7348786722439128,0.7258064516129032,Decision Tree,premier_league
+D,0.08876646493759008,0.2,Decision Tree,premier_league
+D,0.16780053526240407,0.1836734693877551,Decision Tree,premier_league
+D,0.24612171903461702,0.23333333333333334,Decision Tree,premier_league
+D,0.3253025851700784,0.25316455696202533,Decision Tree,premier_league
+H,0.09117086622543176,0.125,Decision Tree,premier_league
+H,0.10371159312677895,0.08695652173913043,Decision Tree,premier_league
+H,0.27531533307382405,0.2236842105263158,Decision Tree,premier_league
+H,0.34181862266098817,0.36909871244635195,Decision Tree,premier_league
+H,0.42851412631574176,0.4431818181818182,Decision Tree,premier_league
+H,0.5444203069532562,0.640625,Decision Tree,premier_league
+H,0.6750755980004565,0.7027027027027027,Decision Tree,premier_league
+H,0.7360540796689596,0.7692307692307693,Decision Tree,premier_league
+H,0.8173243035758961,0.875,Decision Tree,premier_league

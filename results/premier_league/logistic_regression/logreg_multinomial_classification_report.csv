@@ -1,0 +1,7 @@
+,precision,recall,f1-score,support,Model,League
+A,0.5243445692883895,0.603448275862069,0.561122244488978,232.0,Logistic Regression (Multinomial),premier_league
+D,0.271356783919598,0.31952662721893493,0.29347826086956524,169.0,Logistic Regression (Multinomial),premier_league
+H,0.7006802721088435,0.5738161559888579,0.6309341500765697,359.0,Logistic Regression (Multinomial),premier_league
+accuracy,0.5263157894736842,0.5263157894736842,0.5263157894736842,0.5263157894736842,Logistic Regression (Multinomial),premier_league
+macro avg,0.4987938751056104,0.4989303530232873,0.495178218478371,760.0,Logistic Regression (Multinomial),premier_league
+weighted avg,0.5513834924268333,0.5263157894736842,0.5345836140603788,760.0,Logistic Regression (Multinomial),premier_league
