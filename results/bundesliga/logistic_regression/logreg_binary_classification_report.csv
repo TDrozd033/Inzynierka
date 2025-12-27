@@ -1,0 +1,6 @@
+,precision,recall,f1-score,support,Model,League
+NoHomeWin (A/D),0.6829268292682927,0.6726726726726727,0.6777609682299546,333.0,Logistic Regression (Binary),bundesliga
+HomeWin (H),0.6161971830985915,0.6272401433691757,0.6216696269982238,279.0,Logistic Regression (Binary),bundesliga
+accuracy,0.6519607843137255,0.6519607843137255,0.6519607843137255,0.6519607843137255,Logistic Regression (Binary),bundesliga
+macro avg,0.6495620061834422,0.6499564080209241,0.6497152976140892,612.0,Logistic Regression (Binary),bundesliga
+weighted avg,0.6525059611615173,0.6519607843137255,0.6521899156096068,612.0,Logistic Regression (Binary),bundesliga

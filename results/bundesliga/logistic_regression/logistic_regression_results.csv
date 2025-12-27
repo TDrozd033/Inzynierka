@@ -1,0 +1,2 @@
+Model,Accuracy,Macro-F1,League,SplitDate,N_train,N_test
+Logistic Regression (Multinomial),0.46895424836601307,0.45470421239023207,bundesliga,2022-07-01,2142,612

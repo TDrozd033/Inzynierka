@@ -1,0 +1,2 @@
+Model,Accuracy,Macro-F1,League,SplitDate,N_train,N_test
+XGBoost,0.49271137026239065,0.46215983170951597,ligue_1,2022-07-01,2660,686

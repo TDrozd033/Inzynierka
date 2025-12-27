@@ -1,0 +1,2 @@
+Model,Accuracy,Macro-F1,League,SplitDate,N_train,N_test
+Random Forest,0.4868804664723032,0.44719140994281786,ligue_1,2022-07-01,2660,686

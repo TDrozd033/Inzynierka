@@ -1,0 +1,2 @@
+Model,Accuracy,Macro-F1,League,SplitDate,N_train,N_test
+Decision Tree (Multiclass),0.4710526315789474,0.455116275805931,la_liga,2022-07-01,2660,760

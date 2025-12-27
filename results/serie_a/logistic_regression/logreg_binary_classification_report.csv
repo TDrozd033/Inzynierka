@@ -1,0 +1,6 @@
+,precision,recall,f1-score,support,Model,League
+NoHomeWin (A/D),0.7177033492822966,0.6818181818181818,0.6993006993006993,440.0,Logistic Regression (Binary),serie_a
+HomeWin (H),0.5906432748538012,0.63125,0.6102719033232629,320.0,Logistic Regression (Binary),serie_a
+accuracy,0.6605263157894737,0.6605263157894737,0.6605263157894737,0.6605263157894737,Logistic Regression (Binary),serie_a
+macro avg,0.6541733120680489,0.6565340909090909,0.654786301311981,760.0,Logistic Regression (Binary),serie_a
+weighted avg,0.6642043705755617,0.6605263157894737,0.6618148904680945,760.0,Logistic Regression (Binary),serie_a
