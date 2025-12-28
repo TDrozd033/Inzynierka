@@ -1,0 +1,7 @@
+Class,precision,recall,f1-score,support,Model,League,Experiment,Option,SplitDate
+A,0.7222222222222222,0.05652173913043478,0.10483870967741936,230.0,Elastic Net Regression,ligue_1,linear_regression,A,2022-07-01
+D,0.2629757785467128,0.8786127167630058,0.4047936085219707,173.0,Elastic Net Regression,ligue_1,linear_regression,A,2022-07-01
+H,0.6888888888888889,0.21908127208480566,0.3324396782841823,283.0,Elastic Net Regression,ligue_1,linear_regression,A,2022-07-01
+accuracy,0.33090379008746357,0.33090379008746357,0.33090379008746357,0.33090379008746357,Elastic Net Regression,ligue_1,linear_regression,A,2022-07-01
+macro avg,0.5580289632192746,0.3847385759927488,0.2806906654945241,686.0,Elastic Net Regression,ligue_1,linear_regression,A,2022-07-01
+weighted avg,0.5926552133458425,0.33090379008746357,0.2743770064934854,686.0,Elastic Net Regression,ligue_1,linear_regression,A,2022-07-01

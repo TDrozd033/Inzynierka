@@ -1,0 +1,21 @@
+YearMonth,Accuracy,Model
+2022-08,0.5714285714285714,Logistic Regression
+2022-09,0.4444444444444444,Logistic Regression
+2022-10,0.559322033898305,Logistic Regression
+2022-11,0.45,Logistic Regression
+2022-12,0.4444444444444444,Logistic Regression
+2023-01,0.5428571428571428,Logistic Regression
+2023-02,0.425,Logistic Regression
+2023-03,0.5806451612903226,Logistic Regression
+2023-04,0.5645161290322581,Logistic Regression
+2023-05,0.4791666666666667,Logistic Regression
+2023-08,0.6206896551724138,Logistic Regression
+2023-09,0.5789473684210527,Logistic Regression
+2023-10,0.5757575757575758,Logistic Regression
+2023-11,0.4666666666666667,Logistic Regression
+2023-12,0.30303030303030304,Logistic Regression
+2024-01,0.75,Logistic Regression
+2024-02,0.5952380952380952,Logistic Regression
+2024-03,0.42857142857142855,Logistic Regression
+2024-04,0.5849056603773585,Logistic Regression
+2024-05,0.6764705882352942,Logistic Regression

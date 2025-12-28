@@ -1,0 +1,7 @@
+Class,precision,recall,f1-score,support,Model,League,Experiment,Option,SplitDate
+A,0.8181818181818182,0.05084745762711865,0.09574468085106383,177.0,Linear Regression,bundesliga,linear_regression,A,2022-07-01
+D,0.2764227642276423,0.8717948717948718,0.41975308641975306,156.0,Linear Regression,bundesliga,linear_regression,A,2022-07-01
+H,0.7522935779816514,0.2939068100358423,0.422680412371134,279.0,Linear Regression,bundesliga,linear_regression,A,2022-07-01
+accuracy,0.3709150326797386,0.3709150326797386,0.3709150326797386,0.3709150326797386,Linear Regression,bundesliga,linear_regression,A,2022-07-01
+macro avg,0.6156327201303706,0.4055163798192776,0.3127260598806503,612.0,Linear Regression,bundesliga,linear_regression,A,2022-07-01
+weighted avg,0.6500490870826385,0.3709150326797386,0.32737928928703625,612.0,Linear Regression,bundesliga,linear_regression,A,2022-07-01

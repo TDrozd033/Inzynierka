@@ -1,0 +1,7 @@
+Class,precision,recall,f1-score,support,Model,League,Experiment,Option,SplitDate
+A,0.6216216216216216,0.39655172413793105,0.4842105263157895,232.0,Elastic Net Regression,premier_league,linear_regression,B,2022-07-01
+D,0.2824675324675325,0.514792899408284,0.36477987421383645,169.0,Elastic Net Regression,premier_league,linear_regression,B,2022-07-01
+H,0.7006578947368421,0.5933147632311978,0.6425339366515838,359.0,Elastic Net Regression,premier_league,linear_regression,B,2022-07-01
+accuracy,0.5157894736842106,0.5157894736842106,0.5157894736842106,0.5157894736842106,Elastic Net Regression,premier_league,linear_regression,B,2022-07-01
+macro avg,0.5349156829419988,0.5015531289258043,0.49717477906040325,760.0,Elastic Net Regression,premier_league,linear_regression,B,2022-07-01
+weighted avg,0.5835387018602046,0.5157894736842106,0.5324399001385791,760.0,Elastic Net Regression,premier_league,linear_regression,B,2022-07-01

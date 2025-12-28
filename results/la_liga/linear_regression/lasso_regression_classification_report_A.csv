@@ -1,0 +1,7 @@
+Class,precision,recall,f1-score,support,Model,League,Experiment,Option,SplitDate
+A,0.7272727272727273,0.037209302325581395,0.07079646017699115,215.0,Lasso Regression,la_liga,linear_regression,A,2022-07-01
+D,0.2744186046511628,0.9030612244897959,0.42092746730083236,196.0,Lasso Regression,la_liga,linear_regression,A,2022-07-01
+H,0.7788461538461539,0.23209169054441262,0.3576158940397351,349.0,Lasso Regression,la_liga,linear_regression,A,2022-07-01
+accuracy,0.35,0.35,0.35,0.35,Lasso Regression,la_liga,linear_regression,A,2022-07-01
+macro avg,0.5935124952566814,0.3907874057865966,0.2831132738391862,760.0,Lasso Regression,la_liga,linear_regression,A,2022-07-01
+weighted avg,0.6341670928520684,0.35,0.29280390730116285,760.0,Lasso Regression,la_liga,linear_regression,A,2022-07-01

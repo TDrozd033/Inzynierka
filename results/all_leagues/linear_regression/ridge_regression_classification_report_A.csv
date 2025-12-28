@@ -1,0 +1,7 @@
+Class,precision,recall,f1-score,support,Model,League,Experiment,Option,SplitDate
+A,0.7469135802469136,0.11182994454713494,0.1945337620578778,1082.0,Ridge Regression,all_leagues,linear_regression,A,2022-07-01
+D,0.2744268077601411,0.8587196467991169,0.41593156909917134,906.0,Ridge Regression,all_leagues,linear_regression,A,2022-07-01
+H,0.7469879518072289,0.2729559748427673,0.3998157531091663,1590.0,Ridge Regression,all_leagues,linear_regression,A,2022-07-01
+accuracy,0.37255449972051424,0.37255449972051424,0.37255449972051424,0.37255449972051424,Ridge Regression,all_leagues,linear_regression,A,2022-07-01
+macro avg,0.5894427799380945,0.4145018553963397,0.3367603614220718,3578.0,Ridge Regression,all_leagues,linear_regression,A,2022-07-01
+weighted avg,0.627306323373768,0.37255449972051424,0.34181849625322736,3578.0,Ridge Regression,all_leagues,linear_regression,A,2022-07-01
