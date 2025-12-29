@@ -1,21 +1,21 @@
 Position,Team,Played,Won,Draw,Lost,GoalsFor,GoalsAgainst,GoalDiff,Points
-1,FC Internazionale Milano,15,11,0,4,34,14,20,33
-2,AC Milan,15,9,5,1,24,13,11,32
-3,SSC Napoli,15,10,1,4,22,13,9,31
-4,AS Roma,16,10,0,6,17,10,7,30
-5,Juventus FC,16,8,5,3,21,15,6,29
-6,Bologna FC 1909,15,7,4,4,23,13,10,25
-7,Como 1907,15,6,6,3,19,12,7,24
-8,SS Lazio,16,6,5,5,17,11,6,23
-9,Atalanta BC,16,5,7,4,20,18,2,22
-10,US Sassuolo Calcio,16,6,3,7,21,20,1,21
-11,US Cremonese,16,5,6,5,18,18,0,21
-12,Udinese Calcio,16,6,3,7,17,27,-10,21
-13,Torino FC,16,5,5,6,16,26,-10,20
-14,US Lecce,15,4,4,7,11,19,-8,16
-15,Cagliari Calcio,16,3,6,7,17,23,-6,15
-16,Genoa CFC,16,3,5,8,16,24,-8,14
-17,Parma Calcio 1913,15,3,5,7,10,18,-8,14
-18,Hellas Verona FC,15,2,6,7,13,22,-9,12
-19,AC Pisa 1909,16,1,8,7,12,22,-10,11
-20,ACF Fiorentina,16,1,6,9,17,27,-10,9
+1,FC Internazionale Milano,16,12,0,4,35,14,21,36
+2,AC Milan,16,10,5,1,27,13,14,35
+3,SSC Napoli,16,11,1,4,24,13,11,34
+4,Juventus FC,17,9,5,3,23,15,8,32
+5,AS Roma,16,10,0,6,17,10,7,30
+6,Como 1907,16,7,6,3,22,12,10,27
+7,Bologna FC 1909,16,7,5,4,24,14,10,26
+8,SS Lazio,17,6,6,5,18,12,6,24
+9,US Sassuolo Calcio,17,6,4,7,22,21,1,22
+10,Atalanta BC,17,5,7,5,20,19,1,22
+11,Udinese Calcio,17,6,4,7,18,28,-10,22
+12,US Cremonese,17,5,6,6,18,20,-2,21
+13,Torino FC,17,5,5,7,17,28,-11,20
+14,Cagliari Calcio,17,4,6,7,19,24,-5,18
+15,Parma Calcio 1913,16,4,5,7,11,18,-7,17
+16,US Lecce,16,4,4,8,11,22,-11,16
+17,Genoa CFC,16,3,5,8,16,24,-8,14
+18,Hellas Verona FC,16,2,6,8,13,25,-12,12
+19,AC Pisa 1909,17,1,8,8,12,24,-12,11
+20,ACF Fiorentina,17,1,6,10,17,28,-11,9

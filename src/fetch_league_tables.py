@@ -10,9 +10,6 @@ from dotenv import load_dotenv
 from src.football_data_client import LEAGUES
 
 
-# =====================
-# KONFIG
-# =====================
 
 load_dotenv()
 
@@ -30,9 +27,6 @@ OUT_DIR = PROJECT_ROOT / "data_app" / "standings"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
-# =====================
-# LOGIKA
-# =====================
 
 def fetch_standings_for_league(league_key: str, league_code: str) -> pd.DataFrame:
     """
@@ -44,7 +38,7 @@ def fetch_standings_for_league(league_key: str, league_code: str) -> pd.DataFram
 
     data = r.json()
 
-    # interesuje nas tabela TOTAL
+
     standings = next(
         s for s in data["standings"] if s["type"] == "TOTAL"
     )

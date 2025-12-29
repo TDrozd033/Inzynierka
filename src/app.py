@@ -11,9 +11,7 @@ import pandas as pd
 
 from src.football_data_client import LEAGUES
 
-# =====================
-# KONFIG
-# =====================
+
 
 STANDINGS_DIR = PROJECT_ROOT / "data_app" / "standings"
 PREDICTIONS_DIR = PROJECT_ROOT / "data_app" / "predictions"
@@ -71,9 +69,7 @@ LEAGUE_ZONES = {
 LEAGUE_CENTER_COLS = ["Played", "Won", "Draw", "Lost", "GoalsFor", "GoalsAgainst", "GoalDiff", "Points"]
 PRED_CENTER_COLS = ["Confidence", "P(H)", "P(D)", "P(A)"]
 
-# =====================
 # UI / STYLE
-# =====================
 
 st.set_page_config(page_title="Football Match Predictor", layout="wide")
 
@@ -129,9 +125,9 @@ for league_key in LEAGUES.keys():
     st.session_state.setdefault(f"show_table_{league_key}", False)
     st.session_state.setdefault(f"show_pred_{league_key}", False)
 
-# =====================
+
 # FUNKCJE
-# =====================
+
 
 def card_start():
     st.markdown(
@@ -224,9 +220,9 @@ def league_legend(league_key):
                 unsafe_allow_html=True,
             )
 
-# =====================
+
 # ZAWARTOŚĆ
-# =====================
+
 
 for tab, league_key in zip(tabs, LEAGUES.keys()):
     with tab:

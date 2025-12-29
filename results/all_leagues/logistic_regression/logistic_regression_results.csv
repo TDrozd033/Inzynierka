@@ -1,2 +1,2 @@
 Model,Accuracy,Macro-F1,League,SplitDate,N_train,N_test
-Logistic Regression (Multinomial),0.5089435438792621,0.48701719296738216,all_leagues,2022-07-01,12782,3578
+Logistic Regression,0.5089435438792621,0.48701719296738216,all_leagues,2022-07-01,12782,3578

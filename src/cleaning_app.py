@@ -3,9 +3,9 @@ import numpy as np
 import glob
 from pathlib import Path
 
-# ============================================================
+
 # KONFIGURACJA KOLUMN (1:1 z notebooka)
-# ============================================================
+
 
 CORE_COLS = [
     'Div', 'Date', 'HomeTeam', 'AwayTeam',
@@ -66,9 +66,9 @@ TEAM_ALIAS = {
     "Nimes": "Nîmes",
 }
 
-# ============================================================
+
 # FUNKCJE POMOCNICZE
-# ============================================================
+
 
 def parse_date(df, col="Date"):
     df[col] = pd.to_datetime(df[col], errors="coerce", dayfirst=True)
@@ -99,9 +99,9 @@ def standardize_numeric(df):
     return df
 
 
-# ============================================================
+
 # CLEANING JEDNEJ LIGI
-# ============================================================
+
 
 def load_and_clean_league(league_dir: Path, league_name: str) -> pd.DataFrame:
     files = sorted(glob.glob(str(league_dir / "*.csv")))
@@ -141,9 +141,9 @@ def load_and_clean_league(league_dir: Path, league_name: str) -> pd.DataFrame:
     return df_all
 
 
-# ============================================================
+
 # CLEANING WSZYSTKICH LIG (POD APLIKACJĘ)
-# ============================================================
+
 
 def load_all_leagues(raw_base_dir: Path) -> pd.DataFrame:
     league_dirs = {

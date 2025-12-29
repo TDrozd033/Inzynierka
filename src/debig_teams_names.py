@@ -3,11 +3,11 @@ import pandas as pd
 import os
 from dotenv import load_dotenv
 
-# === konfiguracja ===
+
 load_dotenv()
 
 API_KEY = os.getenv("FOOTBALL_DATA_KEY")  
-assert API_KEY is not None, "❌ Brak API key w .env"
+assert API_KEY is not None, " Brak API key w .env"
 
 HEADERS = {
     "X-Auth-Token": API_KEY
@@ -63,7 +63,7 @@ print(api_teams)
 
 from pathlib import Path
 
-# === zapis nazw drużyn z API ===
+
 out_dir = Path("data_app/debug")
 out_dir.mkdir(parents=True, exist_ok=True)
 

@@ -1,21 +1,21 @@
 Position,Team,Played,Won,Draw,Lost,GoalsFor,GoalsAgainst,GoalDiff,Points
-1,Arsenal FC,17,12,3,2,31,10,21,39
-2,Manchester City FC,17,12,1,4,41,16,25,37
-3,Aston Villa FC,17,11,3,3,27,18,9,36
-4,Chelsea FC,17,8,5,4,29,17,12,29
-5,Liverpool FC,17,9,2,6,28,25,3,29
-6,Sunderland AFC,17,7,6,4,19,17,2,27
-7,Manchester United FC,17,7,5,5,31,28,3,26
-8,Crystal Palace FC,17,7,5,5,21,19,2,26
-9,Brighton & Hove Albion FC,17,6,6,5,25,23,2,24
-10,Everton FC,17,7,3,7,18,20,-2,24
-11,Newcastle United FC,17,6,5,6,23,22,1,23
-12,Brentford FC,17,7,2,8,24,25,-1,23
-13,Fulham FC,17,7,2,8,24,26,-2,23
-14,Tottenham Hotspur FC,17,6,4,7,26,23,3,22
-15,AFC Bournemouth,17,5,7,5,26,29,-3,22
-16,Leeds United FC,17,5,4,8,24,31,-7,19
-17,Nottingham Forest FC,17,5,3,9,17,26,-9,18
-18,West Ham United FC,17,3,4,10,19,35,-16,13
-19,Burnley FC,17,3,2,12,19,34,-15,11
-20,Wolverhampton Wanderers FC,17,0,2,15,9,37,-28,2
+1,Arsenal FC,18,13,3,2,33,11,22,42
+2,Manchester City FC,18,13,1,4,43,17,26,40
+3,Aston Villa FC,18,12,3,3,29,19,10,39
+4,Liverpool FC,18,10,2,6,30,26,4,32
+5,Chelsea FC,18,8,5,5,30,19,11,29
+6,Manchester United FC,18,8,5,5,32,28,4,29
+7,Sunderland AFC,18,7,7,4,20,18,2,28
+8,Brentford FC,18,8,2,8,28,26,2,26
+9,Crystal Palace FC,18,7,5,6,21,20,1,26
+10,Fulham FC,18,8,2,8,25,26,-1,26
+11,Tottenham Hotspur FC,18,7,4,7,27,23,4,25
+12,Everton FC,18,7,4,7,18,20,-2,25
+13,Brighton & Hove Albion FC,18,6,6,6,26,25,1,24
+14,Newcastle United FC,18,6,5,7,23,23,0,23
+15,AFC Bournemouth,18,5,7,6,27,33,-6,22
+16,Leeds United FC,18,5,5,8,25,32,-7,20
+17,Nottingham Forest FC,18,5,3,10,18,28,-10,18
+18,West Ham United FC,18,3,4,11,19,36,-17,13
+19,Burnley FC,18,3,3,12,19,34,-15,12
+20,Wolverhampton Wanderers FC,18,0,2,16,10,39,-29,2

@@ -1,7 +1,4 @@
-# ============================================================
-# FEATURE ENGINEERING — ALL LEAGUES (APP VERSION)
-# 1:1 LOGIKA Z PROJEKTU
-# ============================================================
+
 
 import pandas as pd
 import numpy as np
@@ -12,9 +9,7 @@ warnings.filterwarnings("ignore")
 pd.set_option("display.max_columns", None)
 pd.set_option("display.precision", 4)
 
-# ============================================================
-# KONFIGURACJA
-# ============================================================
+
 
 LEAGUE = "all_leagues"
 EXPERIMENT = "feature_engineering"
@@ -33,18 +28,14 @@ OUT_PATH = DATA_DIR / "all_leagues_features.csv"
 print("IN_PATH :", IN_PATH)
 print("OUT_PATH:", OUT_PATH)
 
-# ============================================================
-# LOAD DATA
-# ============================================================
+
 
 df = pd.read_csv(IN_PATH, parse_dates=["Date"])
 df = df.sort_values(["League", "Date", "HomeTeam", "AwayTeam"]).reset_index(drop=True)
 
 print("Shape after cleaning:", df.shape)
 
-# ============================================================
-# BASIC MATCH DIFFERENCES
-# ============================================================
+
 
 df["ShotsDiff"] = df["HS"] - df["AS"]
 df["ShotsOnTargetDiff"] = df["HST"] - df["AST"]
@@ -55,9 +46,6 @@ df["CardsDiff"] = (df["HY"] + df["HR"]) - (df["AY"] + df["AR"])
 df["GoalDiff"] = df["FTHG"] - df["FTAG"]
 df["TotalGoals"] = df["FTHG"] + df["FTAG"]
 
-# ============================================================
-# MARKET FEATURES (BUKMACHERKA — ZOSTAJE)
-# ============================================================
 
 inv_sum_b365 = (1/df["B365H"]) + (1/df["B365D"]) + (1/df["B365A"])
 df["Prob_H_b365"] = (1/df["B365H"]) / inv_sum_b365
@@ -79,9 +67,6 @@ df["OddsSpread_H"] = df["BbMxH"] - df["BbAvH"]
 df["OddsSpread_D"] = df["BbMxD"] - df["BbAvD"]
 df["OddsSpread_A"] = df["BbMxA"] - df["BbAvA"]
 
-# ============================================================
-# TEAM-MATCH VIEW
-# ============================================================
 
 base_cols = ["League", "Date", "Season", "HomeTeam", "AwayTeam", "FTHG", "FTAG", "FTR"]
 
@@ -118,9 +103,7 @@ tmatches = pd.concat(
 GROUP_TEAM = ["League", "Team"]
 GROUP_TEAM_SEASON = ["League", "Team", "Season"]
 
-# ============================================================
-# ROLLING FORM FEATURES
-# ============================================================
+
 
 WINDOW = 5
 grp = tmatches.groupby(GROUP_TEAM, group_keys=False)
@@ -140,9 +123,6 @@ for W in (3, 10):
 
 tmatches["Pts_trend_3v10"] = tmatches["Pts_last3"] - tmatches["Pts_last10"]
 
-# ============================================================
-# MERGE HOME / AWAY FORM
-# ============================================================
 
 team_form_cols = [
     "GF_last5","GA_last5","GD_last5","Pts_last5",
@@ -163,18 +143,14 @@ df = df.merge(away_form, on=["League","Date","AwayTeam"], how="left")
 for c in team_form_cols:
     df[f"FormDiff_{c}"] = df[f"Home_{c}"] - df[f"Away_{c}"]
 
-# ============================================================
-# TIME FEATURES
-# ============================================================
+
 
 df["IsHomeAlways1"] = 1
 df["Month"] = df["Date"].dt.month.astype("int16")
 df["Weekday"] = df["Date"].dt.weekday.astype("int16")
 df["IsWeekend"] = df["Weekday"].isin([5,6]).astype("int8")
 
-# ============================================================
-# SEASON STRENGTH
-# ============================================================
+
 
 tm_season = tmatches.copy()
 g = tm_season.groupby(GROUP_TEAM_SEASON)
@@ -215,9 +191,6 @@ df["SeasonStrength_PtsDiff"] = df["Home_AvgPts_season"] - df["Away_AvgPts_season
 df["SeasonStrength_GDDiff"] = df["Home_AvgGD_season"] - df["Away_AvgGD_season"]
 
 
-# ============================================
-# DODATKOWY FEATURE ENGINEERING (XGBOOST / DRZEWA)
-# ============================================
 
 eps = 1e-3
 
@@ -273,9 +246,6 @@ else:
     df["Market_BalancedMatch"] = 0
 
 
-# ============================================================
-# SAVE
-# ============================================================
 
 df.to_csv(OUT_PATH, index=False)
 print("FINAL SHAPE:", df.shape)

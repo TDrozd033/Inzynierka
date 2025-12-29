@@ -1,21 +1,21 @@
 YearMonth,Accuracy,Model
-2022-08,0.5306122448979592,Linear Regression A
-2022-09,0.16666666666666666,Linear Regression A
-2022-10,0.3389830508474576,Linear Regression A
-2022-11,0.2,Linear Regression A
-2022-12,0.3888888888888889,Linear Regression A
-2023-01,0.4,Linear Regression A
-2023-02,0.35,Linear Regression A
-2023-03,0.3548387096774194,Linear Regression A
-2023-04,0.3064516129032258,Linear Regression A
-2023-05,0.3541666666666667,Linear Regression A
-2023-08,0.41379310344827586,Linear Regression A
-2023-09,0.5,Linear Regression A
-2023-10,0.5757575757575758,Linear Regression A
-2023-11,0.23333333333333334,Linear Regression A
-2023-12,0.2878787878787879,Linear Regression A
-2024-01,0.6,Linear Regression A
-2024-02,0.40476190476190477,Linear Regression A
-2024-03,0.4857142857142857,Linear Regression A
-2024-04,0.4716981132075472,Linear Regression A
-2024-05,0.5,Linear Regression A
+2022-08,0.5306122448979592,Linear Regression (Outcome Regression)
+2022-09,0.16666666666666666,Linear Regression (Outcome Regression)
+2022-10,0.3389830508474576,Linear Regression (Outcome Regression)
+2022-11,0.2,Linear Regression (Outcome Regression)
+2022-12,0.3888888888888889,Linear Regression (Outcome Regression)
+2023-01,0.4,Linear Regression (Outcome Regression)
+2023-02,0.35,Linear Regression (Outcome Regression)
+2023-03,0.3548387096774194,Linear Regression (Outcome Regression)
+2023-04,0.3064516129032258,Linear Regression (Outcome Regression)
+2023-05,0.3541666666666667,Linear Regression (Outcome Regression)
+2023-08,0.41379310344827586,Linear Regression (Outcome Regression)
+2023-09,0.5,Linear Regression (Outcome Regression)
+2023-10,0.5757575757575758,Linear Regression (Outcome Regression)
+2023-11,0.23333333333333334,Linear Regression (Outcome Regression)
+2023-12,0.2878787878787879,Linear Regression (Outcome Regression)
+2024-01,0.6,Linear Regression (Outcome Regression)
+2024-02,0.40476190476190477,Linear Regression (Outcome Regression)
+2024-03,0.4857142857142857,Linear Regression (Outcome Regression)
+2024-04,0.4716981132075472,Linear Regression (Outcome Regression)
+2024-05,0.5,Linear Regression (Outcome Regression)

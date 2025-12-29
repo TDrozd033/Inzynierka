@@ -1,21 +1,21 @@
 YearMonth,Accuracy,Model
-2022-08,0.5918367346938775,Linear Regression B
-2022-09,0.3333333333333333,Linear Regression B
-2022-10,0.5254237288135594,Linear Regression B
-2022-11,0.35,Linear Regression B
-2022-12,0.3888888888888889,Linear Regression B
-2023-01,0.4,Linear Regression B
-2023-02,0.275,Linear Regression B
-2023-03,0.5806451612903226,Linear Regression B
-2023-04,0.4838709677419355,Linear Regression B
-2023-05,0.4791666666666667,Linear Regression B
-2023-08,0.6551724137931034,Linear Regression B
-2023-09,0.5789473684210527,Linear Regression B
-2023-10,0.6363636363636364,Linear Regression B
-2023-11,0.26666666666666666,Linear Regression B
-2023-12,0.42424242424242425,Linear Regression B
-2024-01,0.85,Linear Regression B
-2024-02,0.5,Linear Regression B
-2024-03,0.6571428571428571,Linear Regression B
-2024-04,0.5471698113207547,Linear Regression B
-2024-05,0.5882352941176471,Linear Regression B
+2022-08,0.5918367346938775,Linear Regression (GoalDiff Regression)
+2022-09,0.3333333333333333,Linear Regression (GoalDiff Regression)
+2022-10,0.5254237288135594,Linear Regression (GoalDiff Regression)
+2022-11,0.35,Linear Regression (GoalDiff Regression)
+2022-12,0.3888888888888889,Linear Regression (GoalDiff Regression)
+2023-01,0.4,Linear Regression (GoalDiff Regression)
+2023-02,0.275,Linear Regression (GoalDiff Regression)
+2023-03,0.5806451612903226,Linear Regression (GoalDiff Regression)
+2023-04,0.4838709677419355,Linear Regression (GoalDiff Regression)
+2023-05,0.4791666666666667,Linear Regression (GoalDiff Regression)
+2023-08,0.6551724137931034,Linear Regression (GoalDiff Regression)
+2023-09,0.5789473684210527,Linear Regression (GoalDiff Regression)
+2023-10,0.6363636363636364,Linear Regression (GoalDiff Regression)
+2023-11,0.26666666666666666,Linear Regression (GoalDiff Regression)
+2023-12,0.42424242424242425,Linear Regression (GoalDiff Regression)
+2024-01,0.85,Linear Regression (GoalDiff Regression)
+2024-02,0.5,Linear Regression (GoalDiff Regression)
+2024-03,0.6571428571428571,Linear Regression (GoalDiff Regression)
+2024-04,0.5471698113207547,Linear Regression (GoalDiff Regression)
+2024-05,0.5882352941176471,Linear Regression (GoalDiff Regression)

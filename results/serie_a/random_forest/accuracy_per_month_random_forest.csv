@@ -1,0 +1,21 @@
+YearMonth,Accuracy,Model
+2022-08,0.5263157894736842,Random Forest
+2022-09,0.4375,Random Forest
+2022-10,0.62,Random Forest
+2022-11,0.5666666666666667,Random Forest
+2023-01,0.44,Random Forest
+2023-02,0.55,Random Forest
+2023-03,0.36666666666666664,Random Forest
+2023-04,0.5,Random Forest
+2023-05,0.38,Random Forest
+2023-06,0.6,Random Forest
+2023-08,0.5,Random Forest
+2023-09,0.6511627906976745,Random Forest
+2023-10,0.5675675675675675,Random Forest
+2023-11,0.3333333333333333,Random Forest
+2023-12,0.52,Random Forest
+2024-01,0.6111111111111112,Random Forest
+2024-02,0.5454545454545454,Random Forest
+2024-03,0.5588235294117647,Random Forest
+2024-04,0.4888888888888889,Random Forest
+2024-05,0.45,Random Forest

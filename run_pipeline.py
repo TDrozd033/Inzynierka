@@ -17,10 +17,10 @@ def run(script):
 if __name__ == "__main__":
     print("=== FOOTBALL PREDICTION PIPELINE ===")
 
-    # 1. Aktualne tabele ligowe
+  
     run("src.fetch_league_tables")
 
-    # 2. Predykcje najbliższej kolejki (features + model)
+    
     run("src.predict_matches")
 
     print("\n=== PIPELINE FINISHED SUCCESSFULLY ===")

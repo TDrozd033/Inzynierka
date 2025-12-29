@@ -1,22 +1,16 @@
-# ============================================================
-# TRAIN MODEL APP — DECISION TREE (H/D/A)
-# ============================================================
-
 import json
 import joblib
 import pandas as pd
 from pathlib import Path
 
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import LabelEncoder
 from sklearn.calibration import CalibratedClassifierCV
+from sklearn.metrics import accuracy_score, f1_score, classification_report
 
 
-# ============================================================
-# KONFIGURACJA ŚCIEŻEK
-# ============================================================
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
@@ -24,7 +18,7 @@ DATA_PATH = PROJECT_ROOT / "data_app/processed/all_leagues/all_leagues_features.
 MODELS_DIR = PROJECT_ROOT / "models"
 MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
-MODEL_PATH = MODELS_DIR / "decision_tree_model.pkl"
+MODEL_PATH = MODELS_DIR / "random_forest_model.pkl"
 ENCODER_PATH = MODELS_DIR / "label_encoder.pkl"
 FEATURES_PATH = MODELS_DIR / "feature_list.json"
 
@@ -32,9 +26,6 @@ print("PROJECT_ROOT:", PROJECT_ROOT)
 print("DATA_PATH:", DATA_PATH)
 
 
-# ============================================================
-# WCZYTANIE DANYCH
-# ============================================================
 
 df = pd.read_csv(DATA_PATH, parse_dates=["Date"])
 df = df.sort_values(["Date", "HomeTeam", "AwayTeam"]).reset_index(drop=True)
@@ -42,9 +33,6 @@ df = df.sort_values(["Date", "HomeTeam", "AwayTeam"]).reset_index(drop=True)
 print("Dane:", df.shape)
 
 
-# ============================================================
-# TARGET + WYBÓR CECH (1:1 Z PROJEKTU)
-# ============================================================
 
 target = "FTR"
 
@@ -89,13 +77,10 @@ keep_patterns = (
 )
 
 X_features = [c for c in candidate_cols if any(p in c for p in keep_patterns)]
-X_features = [c for c in X_features if c != "Prob_H_b365"]  ### DODANE POD DECISION TREE - POZNIEJ PRZY INNYM MODELU BYC MZOE DO USUNIECIA TA LINIA 
+X_features = [c for c in X_features if c != "Prob_H_b365"]  
 print("Liczba cech:", len(X_features))
 
 
-# ============================================================
-# PRZYGOTOWANIE X / y
-# ============================================================
 
 X = df[X_features].copy()
 
@@ -105,29 +90,25 @@ y = le.fit_transform(df[target])
 print("Klasy:", list(le.classes_))
 
 
-# ============================================================
-# MODEL — PARAMETRY Z GRIDSEARCH (BEST)
-# ============================================================
-
-dt_model = DecisionTreeClassifier(
-    criterion="entropy",
-    max_depth=4,
-    min_samples_split=2,
+rf_model = RandomForestClassifier(
+    n_estimators=600,
+    max_depth=8,
     min_samples_leaf=10,
-    max_features=None,
+    min_samples_split=20,
+    max_features=0.3,
+    max_samples=0.8,
     class_weight="balanced",
-    random_state=0
+    random_state=0,
+    n_jobs=-1
 )
 
 pipe = Pipeline([
     ("imputer", SimpleImputer(strategy="median")),
-    ("model", dt_model)
+    ("model", rf_model)
 ])
 
 
-# ============================================================
-# KALIBRACJA PRAWDOPODOBIEŃSTW
-# ============================================================
+
 
 calibrated_model = CalibratedClassifierCV(
     estimator=pipe,
@@ -135,15 +116,12 @@ calibrated_model = CalibratedClassifierCV(
     cv=5
 )
 
-print("Trenowanie modelu (Decision Tree + kalibracja)...")
+print("Trenowanie modelu (Random Forest + kalibracja)")
 calibrated_model.fit(X, y)
 
 print("Model wytrenowany.")
 
 
-# ============================================================
-# ZAPIS MODELU + METADANYCH
-# ============================================================
 
 joblib.dump(calibrated_model, MODEL_PATH)
 joblib.dump(le, ENCODER_PATH)

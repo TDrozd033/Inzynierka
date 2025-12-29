@@ -7,9 +7,6 @@ import pandas as pd
 from src.football_data_client import get_future_fixtures, LEAGUES
 
 
-# =========
-# KONFIG
-# =========
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
@@ -116,14 +113,12 @@ MANUAL_MAP = {
     "Wolverhampton": "Wolverhampton Wanderers FC"
 }
 
-# =========
-# Pomocnicze
-# =========
+
 
 @dataclass(frozen=True)
 class LeagueConfig:
-    key: str           # np. "premier_league"
-    code: str          # np. "PL"
+    key: str           
+    code: str          
 
 
 def _ensure_datetime_utc(series: pd.Series) -> pd.Series:
@@ -188,24 +183,19 @@ def _build_features_for_fixture_row(
     home = row["HomeTeam"]
     away = row["AwayTeam"]
 
-    # snapshoty
     home_snap = _pick_latest_team_snapshot(history, league, "HomeTeam", home, match_date)
     away_snap = _pick_latest_team_snapshot(history, league, "AwayTeam", away, match_date)
 
     features = {}
 
-    # kalendarz i stałe
     features["Month"] = int(row["Month"])
     features["Weekday"] = int(row["Weekday"])
     features["IsWeekend"] = int(row["IsWeekend"])
     features["IsHomeAlways1"] = 1
 
-    # jeżeli snapshotów nie ma (np. nowy sezon / awans), zostawiamy NaN (imputer w pipeline da radę)
     if home_snap is not None:
         for c in home_snap.index:
             if c.startswith("Home_") or c.startswith("FormDiff_") or c.startswith("SeasonStrength_"):
-                # Home snapshot zawiera też FormDiff/SeasonStrength (z perspektywy meczu),
-                # ale to jest OK: my i tak wybierzemy finalne feature_cols na końcu.
                 features[c] = home_snap[c]
 
     if away_snap is not None:
@@ -213,14 +203,12 @@ def _build_features_for_fixture_row(
             if c.startswith("Away_") or c.startswith("FormDiff_") or c.startswith("SeasonStrength_"):
                 features[c] = away_snap[c]
 
-    # Na końcu zwróć TYLKO to, co model chce
     final = {c: features.get(c, pd.NA) for c in feature_cols}
     return final
 
 
 def load_history_features(path: Path) -> pd.DataFrame:
     df = pd.read_csv(path, parse_dates=["Date"])
-    # upewnij się, że są League
     if "League" not in df.columns:
         raise ValueError("Brak kolumny 'League' w all_leagues_features.csv. Upewnij się, że FE było robione na all_leagues.")
     return df
@@ -238,16 +226,10 @@ def get_next_matchday_fixtures_for_league(league_key: str, limit: int = 40) -> p
 
     fx["Date"] = _ensure_datetime_utc(fx["Date"])
 
-    # === MAPOWANIE: API -> HISTORIA ===
     API_TO_HIST_MAP = {v: k for k, v in MANUAL_MAP.items()}
 
     fx["HomeTeam"] = fx["HomeTeam"].map(API_TO_HIST_MAP)
     fx["AwayTeam"] = fx["AwayTeam"].map(API_TO_HIST_MAP)
-
-
-    #fx.drop(columns=["HomeTeam_hist", "AwayTeam_hist"], inplace=True)
-
-    # wybierz najbliższy matchday (najmniejszy Matchday wśród przyszłych)
     next_md = int(fx["Matchday"].min())
     fx = fx[fx["Matchday"] == next_md].copy()
 
@@ -270,7 +252,6 @@ def build_future_features(
     if history_df is None:
         history_df = load_history_features(FEATURES_HISTORY_PATH)
 
-    # feature list modelu (32 kolumny u Ciebie)
     feature_cols = pd.read_json(feature_list_path, typ="series").tolist()
 
     fixtures = get_next_matchday_fixtures_for_league(league_key)
@@ -285,10 +266,8 @@ def build_future_features(
 
     X_future = pd.DataFrame(rows, columns=feature_cols)
     
-    #### dodane pod decision tree (do usuniecia przy zmianie modelu)
     if "SeasonStrength_PtsDiff" in X_future.columns:
         X_future["SeasonStrength_PtsDiff"] *= 0.6
-    ##### koniec
     return fixtures, X_future
 
 

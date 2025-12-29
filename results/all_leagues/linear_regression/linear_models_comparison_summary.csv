@@ -1,0 +1,5 @@
+Model,Accuracy,Macro-F1,League,Experiment,Option,RMSE,R²,SplitDate,N_test
+Ridge Regression,0.37255449972051424,0.3367603614220718,all_leagues,linear_regression,Outcome Regression,0.7676966799566468,0.18891339680505959,2022-07-01,3578
+Linear Regression,0.3708775852431526,0.33399328357032015,all_leagues,linear_regression,Outcome Regression,0.7675237638121309,0.18927873425405373,2022-07-01,3578
+Lasso Regression,0.3669647847959754,0.3253130067037448,all_leagues,linear_regression,Outcome Regression,0.7674654878981834,0.1894018411370869,2022-07-01,3578
+Elastic Net Regression,0.3669647847959754,0.3253130067037448,all_leagues,linear_regression,Outcome Regression,0.7674654878981834,0.1894018411370869,2022-07-01,3578
